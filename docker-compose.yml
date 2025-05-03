@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  ps5contentserver:
+    image: ps5contentserver:latest
+    container_name: ps5contentserver
+    ports:
+      - "8084:8080"
+    volumes:
+      - /volume1/games/ps4:/usr/src/app/data
+    restart: unless-stopped
